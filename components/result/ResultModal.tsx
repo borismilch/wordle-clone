@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { useAppSelector, useAppDispatch } from '@/hooks/redux'; 
-import { wordStore } from '@/store/reducers';
+import { wordStore, gameStore } from '@/store/reducers';
 
 const ResultModal = () => {
 
@@ -11,6 +11,7 @@ const ResultModal = () => {
 
   const restartGame = () => {
     dispatch(wordStore.refreshGame())
+    dispatch(gameStore.clearFields())
   }
 
   return (

@@ -86,6 +86,9 @@ const slice = createSlice({
     refreshGame: (state) => {
       state.gameEnded = false,
       state.gameWinned = false,
+      state.element = -1,
+      state.row = 0,
+      
       state.table = [
         ['', '', '', '', ''],
         ['', '', '', '', ''],
