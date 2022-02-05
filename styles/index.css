@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .avatar {
+    @apply w-[34px] h-[34px] rounded-full object-cover
+  }
+
+  body {
+    @apply overflow-x-hidden
+  }
+
+  .clean_input {
+    @apply bg-transparent border-0 focus:border-0 ring-0 focus:ring-0
+  }
+
+  .appIcon {
+    @apply text-2xl text-gray-700 transition-all duration-200 p-1 opacity-80 hover:opacity-100 hover:bg-gray-100 active:scale-90 rounded-full
+  }
+
+  .key {
+    @apply p-2 h-[58px] uppercase min-w-[43px] font-semibold text-sm font-sans rounded-lg transition-all duration-200 cursor-pointer active:scale-95 bg-gray-200 hover:opacity-80 outline-none active:ring-0 active:border-0 focus:ring-0 focus:outline-none
+  }
+
+  .button_black {
+    @apply key bg-gray-700 text-white
+  }
+
+  .button_included {
+    @apply key bg-yellow-400 text-white
+  }
+
+  .cell {
+    @apply w-[62px] uppercase h-[62px] p-3 flex items-center justify-center text-4xl font-bold transition-all duration-200
+  }
+
+  .cell_empty {
+    @apply cell border border-gray-300 rounded-sm
+  }
+
+  .cell_filled {
+    @apply cell bg-[#c9b448] text-white
+  }
+
+  .cell_typed {
+    @apply cell border-gray-500  border-2 text-black
+  }
+
+  .cell_green {
+    @apply cell bg-green-500 text-white
+  }
+
+  .cell_black {
+    @apply cell bg-gray-700 text-white
+  }
+
+  .but {
+    @apply text-xl text-white bg-blue-500 rounded-xl transition-all duration-200 cursor-pointer p-2 font-semibold active:scale-90
+  }
+
+  .overlay {
+    @apply inset-0 transition-all duration-300 fixed bg-black bg-opacity-60 flex items-center justify-center
+  }
+
+
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}

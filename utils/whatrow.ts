@@ -1,0 +1,1 @@
+export const whatrow = (idx: number) => idx > 4 ? idx > 9 ? idx > 14? idx > 19 ? idx > 24 ? 6 : 5 : 4 : 3 : 2 : 1 
